@@ -59,7 +59,6 @@ body {
   margin-bottom: 48px;
 }
 
-/* Mobile-first: 1 kolom */
 .pricing-list {
   display: flex;
   flex-direction: column;
@@ -67,7 +66,6 @@ body {
   gap: var(--grid-gap);
 }
 
-/* Card Styling */
 .price-card {
   background-color: var(--bg-card);
   border: 1px solid var(--border-card);
@@ -84,7 +82,6 @@ body {
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
 }
 
-/* Card Unggulan */
 .price-card--featured {
   border: 2px solid var(--color-primary);
   position: relative;
