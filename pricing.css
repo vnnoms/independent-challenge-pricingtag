@@ -1,0 +1,100 @@
+body {
+  font-family: var(--font-family-base);
+  background-color: var(--bg-page);
+  color: var(--color-text);
+}
+
+#pricing-title {
+  font-size: var(--font-size-heading);
+  color: var(--color-primary);
+}
+
+.pricing-list {
+  display: flex;
+  gap: var(--grid-gap);
+}
+
+.price-card {
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-card);
+  border-radius: var(--card-radius);
+}
+
+.price-card--featured {
+  border: 2px solid var(--color-primary);
+}
+
+.badge {
+  font-size: var(--font-size-badge);
+  font-weight: var(--font-weight-bold);
+  background-color: var(--color-primary);
+  border-radius: var(--badge-radius);
+}
+
+.price-card h3 {
+  font-size: var(--font-size-title);
+}
+
+.price {
+  font-size: var(--font-size-price);
+  font-weight: var(--font-weight-bold);
+}
+
+.price-card li {
+  font-size: var(--font-size-body);
+}
+
+.button {
+  background-color: var(--color-primary);
+  border-radius: var(--btn-radius);
+  font-weight: var(--font-weight-bold);
+}
+
+.button:focus-visible {
+  outline: 3px solid var(--color-accent);
+}
+
+@media (min-width: 768px) {
+    .pricing-list {
+        flex-direction: row;
+        justify-content: center;
+        align-items: stretch;
+    }
+
+    .price-card--featured {
+        transform: scale(1.05); /* Menonjol tanpa merusak layout atau urutan baca */
+    }
+
+    .price-card--featured:hover {
+        transform: scale(1.07);
+    }
+}
+
+/* Footer */
+footer {
+    width: 100%;
+    background-color: var(--text);
+    color: var(--bg);
+    margin-top: auto;
+}
+
+.footer-container {
+    max-width: 1024px;
+    margin: 0 auto;
+    padding: 24px 48px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    font-size: 14px;
+}
+
+.kontak ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 8px;
+}
+
+.kontak a {
+    color: var(--accent);
+    text-decoration: none;
+}
