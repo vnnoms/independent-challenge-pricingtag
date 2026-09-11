@@ -1,99 +1,196 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 body {
   font-family: var(--font-family-base);
   background-color: var(--bg-page);
   color: var(--color-text);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Navbar */
+.navbar {
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 18px 48px;
+  background-color: var(--bg-card);
+  border-bottom: 1px solid var(--border-card);
+}
+
+.nav-links {
+  display: flex;
+  gap: 32px;
+  list-style: none;
+  margin: 0;
+}
+
+.nav-links a {
+  color: var(--color-text);
+  text-decoration: none;
+  font-weight: var(--font-weight-bold);
+}
+
+/* Pricing Section */
+.pricing {
+  padding: 60px 24px;
+  flex: 1;
+}
+
+.container {
+  max-width: 1024px;
+  margin: 0 auto;
 }
 
 #pricing-title {
+  text-align: center;
   font-size: var(--font-size-heading);
   color: var(--color-primary);
+  margin-bottom: 48px;
 }
 
+/* Mobile-first: 1 kolom */
 .pricing-list {
   display: flex;
+  flex-direction: column;
+  align-items: center;
   gap: var(--grid-gap);
 }
 
+/* Card Styling */
 .price-card {
   background-color: var(--bg-card);
   border: 1px solid var(--border-card);
   border-radius: var(--card-radius);
+  padding: 32px 24px;
+  width: 100%;
+  max-width: 320px;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
+.price-card:hover {
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+}
+
+/* Card Unggulan */
 .price-card--featured {
   border: 2px solid var(--color-primary);
+  position: relative;
 }
 
 .badge {
+  align-self: flex-start;
   font-size: var(--font-size-badge);
   font-weight: var(--font-weight-bold);
   background-color: var(--color-primary);
+  color: #ffffff;
   border-radius: var(--badge-radius);
+  padding: 4px 12px;
+  margin-bottom: 12px;
 }
 
 .price-card h3 {
   font-size: var(--font-size-title);
+  margin-bottom: 8px;
 }
 
 .price {
   font-size: var(--font-size-price);
   font-weight: var(--font-weight-bold);
+  margin-bottom: 24px;
+}
+
+.price-card ul {
+  list-style-position: inside;
+  margin-bottom: 32px;
+  flex-grow: 1;
+  padding: 0;
 }
 
 .price-card li {
   font-size: var(--font-size-body);
+  margin-bottom: 10px;
+  line-height: 1.4;
 }
 
+/* Tombol */
 .button {
+  display: block;
+  width: 100%;
+  text-align: center;
   background-color: var(--color-primary);
+  color: #ffffff;
+  text-decoration: none;
+  padding: 12px 0;
   border-radius: var(--btn-radius);
   font-weight: var(--font-weight-bold);
+  transition: opacity 0.2s ease;
 }
 
-.button:focus-visible {
+.button:hover {
+  opacity: 0.88;
+}
+
+.button:focus-visible,
+.nav-links a:focus-visible {
   outline: 3px solid var(--color-accent);
+  outline-offset: 3px;
 }
 
+/* Desktop Viewport */
 @media (min-width: 768px) {
-    .pricing-list {
-        flex-direction: row;
-        justify-content: center;
-        align-items: stretch;
-    }
+  .pricing-list {
+    flex-direction: row;
+    justify-content: center;
+    align-items: stretch;
+  }
 
-    .price-card--featured {
-        transform: scale(1.05);
-    }
+  .price-card--featured {
+    transform: scale(1.05);
+  }
 
-    .price-card--featured:hover {
-        transform: scale(1.07);
-    }
+  .price-card--featured:hover {
+    transform: scale(1.07);
+  }
 }
 
+/* Footer */
 footer {
-    width: 100%;
-    background-color: var(--text);
-    color: var(--bg);
-    margin-top: auto;
+  width: 100%;
+  background-color: var(--color-primary);
+  color: var(--bg-card);
+  margin-top: auto;
 }
 
 .footer-container {
-    max-width: 1024px;
-    margin: 0 auto;
-    padding: 24px 48px;
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    font-size: 14px;
+  max-width: 1024px;
+  margin: 0 auto;
+  padding: 24px 48px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  font-size: 14px;
 }
 
 .kontak ul {
-    list-style: none;
-    padding: 0;
-    margin-top: 8px;
+  list-style: none;
+  padding: 0;
+  margin-top: 8px;
 }
 
 .kontak a {
-    color: var(--accent);
-    text-decoration: none;
+  color: var(--color-accent);
+  text-decoration: none;
 }
