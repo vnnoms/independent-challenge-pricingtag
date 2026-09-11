@@ -62,7 +62,7 @@ body {
     }
 
     .price-card--featured {
-        transform: scale(1.05); /* Menonjol tanpa merusak layout atau urutan baca */
+        transform: scale(1.05);
     }
 
     .price-card--featured:hover {
@@ -70,7 +70,6 @@ body {
     }
 }
 
-/* Footer */
 footer {
     width: 100%;
     background-color: var(--text);
