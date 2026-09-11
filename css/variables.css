@@ -1,0 +1,25 @@
+:root {
+  /* Color Tokens */
+  --bg-page: #dcdcde;
+  --bg-card: #ffffff;
+  --color-primary: #1A0089;
+  --color-accent: #FF5E33;
+  --color-text: #1A0089;
+  --border-card: #e2e4e8;
+
+  /* Typography Tokens */
+  --font-family-base: "Alata", sans-serif;
+  --font-size-badge: 12px;
+  --font-size-body: 15px;
+  --font-size-title: 22px;
+  --font-size-price: 28px;
+  --font-size-heading: 32px;
+  --font-weight-regular: 400;
+  --font-weight-bold: 700;
+
+  /* Spacing & Radius */
+  --card-radius: 12px;
+  --badge-radius: 999px;
+  --btn-radius: 8px;
+  --grid-gap: 24px;
+}
